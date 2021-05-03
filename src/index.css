@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 :root {
-    --bg-accent: #d63273;
-    --bg-color: #c2185b;
-    --bg-dark: #a5154f;
-    --grey: #333;
+    --bg-accent: #0078e3;
+    --bg-color: #2578c0;
+    --bg-dark: #0460b1;
+    --grey: rgba(0, 0, 0, 0.3);
     --black: #222;
 }
 
@@ -12,7 +12,11 @@ body {
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: var(--black);
+    --stripe: #18293b;
+    --bg: #142333;
+    background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0, linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0, linear-gradient(315deg, var(--bg) 25%, transparent 25%), linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: var(--stripe);
 }
 
 .App {
@@ -35,6 +39,7 @@ body {
 
 .navbar h1 {
     margin: 10px 0;
+    font-size: 3rem;
 }
 
 .book-list {
@@ -49,7 +54,7 @@ body {
 .book-list li {
     background: var(--bg-color);
     border-radius: 4px;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     margin: 10px 0;
 }
@@ -62,17 +67,18 @@ body {
 .book-list .title {
     font-weight: bold;
     color: #fff;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .book-list .author {
-    font-size: 0.9em;
+    font-size: 1.2em;
     color: #ddd;
 }
 
 .empty {
     margin: 20px;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 form {
@@ -115,4 +121,9 @@ input[type='submit']:hover {
 ::placeholder {
     color: white;
     opacity: 0.5;
+}
+
+::selection {
+    color: white;
+    background: var(--stripe);
 }

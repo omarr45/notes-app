@@ -8,7 +8,6 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(title, author);
     dispatch({
       type: 'ADD_BOOK',
       book: {
@@ -24,19 +23,19 @@ const BookForm = () => {
     <form onSubmit={handleSubmit}>
       <input
         type='text'
-        placeholder='Book title'
+        placeholder='Task title'
         value={title}
         required
         onChange={(e) => setTitle(e.target.value)}
       />
       <input
         type='text'
-        placeholder='Book author'
+        placeholder='Task Details'
         value={author}
         required
         onChange={(e) => setAuthor(e.target.value)}
       />
-      <input type='submit' value='Add Book' />
+      <input type='submit' value='Add Task' />
     </form>
   );
 };

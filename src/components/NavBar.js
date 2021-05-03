@@ -7,8 +7,8 @@ const NavBar = () => {
 
   return (
     <div className='navbar'>
-      <h1>Omar's Reading List</h1>
-      <p> Currently you have {books.length} books to get through...</p>
+      <h1>My Tasks</h1>
+      <p> Currently you have {books.length} tasks to get through...</p>
     </div>
   );
 };
