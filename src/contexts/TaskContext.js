@@ -8,7 +8,7 @@ const TaskContextProvider = (props) => {
     const localData = localStorage.getItem('tasks');
     return localData
       ? JSON.parse(localData)
-      : [{ title: 'You can click on a task', body: 'to remove it' }];
+      : [{ title: 'You can click on a task', body: 'to remove it', id: 1 }];
   });
 
   useEffect(() => {
