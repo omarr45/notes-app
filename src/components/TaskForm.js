@@ -1,22 +1,22 @@
 import React, { useState, useContext } from 'react';
-import { BookContext } from '../contexts/BookContext';
+import { TaskContext } from '../contexts/TaskContext';
 
-const BookForm = () => {
-  const { dispatch } = useContext(BookContext);
+const TaskForm = () => {
+  const { dispatch } = useContext(TaskContext);
   const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [body, setBody] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch({
-      type: 'ADD_BOOK',
-      book: {
+      type: 'ADD_TASK',
+      task: {
         title,
-        author,
+        body,
       },
     });
     setTitle('');
-    setAuthor('');
+    setBody('');
   };
 
   return (
@@ -31,13 +31,13 @@ const BookForm = () => {
       <input
         type='text'
         placeholder='Task Details'
-        value={author}
+        value={body}
         required
-        onChange={(e) => setAuthor(e.target.value)}
+        onChange={(e) => setBody(e.target.value)}
       />
       <input type='submit' value='Add Task' />
     </form>
   );
 };
 
-export default BookForm;
+export default TaskForm;

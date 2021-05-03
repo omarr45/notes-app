@@ -1,16 +1,16 @@
-import BookForm from './components/BookForm';
-import BookList from './components/BookList';
+import TaskForm from './components/TaskForm';
+import TaskList from './components/TaskList';
 import NavBar from './components/NavBar';
-import BookContextProvider from './contexts/BookContext';
+import TaskContextProvider from './contexts/TaskContext';
 
 function App() {
   return (
     <div className='App'>
-      <BookContextProvider>
+      <TaskContextProvider>
         <NavBar />
-        <BookList />
-        <BookForm />
-      </BookContextProvider>
+        <TaskList />
+        <TaskForm />
+      </TaskContextProvider>
     </div>
   );
 }

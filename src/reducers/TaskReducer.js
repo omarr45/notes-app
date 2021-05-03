@@ -1,17 +1,17 @@
 import uuid from 'uuid/dist/v1';
 
-export const bookReducer = (state, action) => {
+export const taskReducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_BOOK':
+    case 'ADD_TASK':
       return [
         ...state,
         {
-          title: action.book.title,
-          author: action.book.author,
+          title: action.task.title,
+          body: action.task.body,
           id: uuid(),
         },
       ];
-    case 'REMOVE_BOOK':
+    case 'REMOVE_TASK':
       return state.filter((b) => b.id !== action.id);
     default:
       return state;
